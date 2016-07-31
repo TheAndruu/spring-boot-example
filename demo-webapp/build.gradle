@@ -1,0 +1,52 @@
+buildscript {
+    ext {
+        springBootVersion = '1.4.0.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'jacoco'
+apply plugin: 'war'
+apply plugin: 'spring-boot'
+
+
+jacoco {
+    toolVersion = "0.7.6.201602180812"
+}
+
+bootRepackage {
+    mainClass = 'com.cuga.demo.webapp.Application'
+}
+
+// Tell the Eclipse IDE to download the source code along with the binaries
+eclipse {
+   classpath {
+      downloadSources=true
+   }
+}
+
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+    compile 'org.mongodb:mongo-java-driver:3.2.2'
+
+    compile 'org.slf4j:slf4j-api:1.7.21'
+
+    // For unit testing
+    testCompile 'junit:junit:4.12'
+    // Mocking ability
+    testCompile 'org.mockito:mockito-all:1.10.19'
+
+    // We're able to rely on our other project as a dependency this way since its another module in the same project
+    compile project(':demo-core')
+}

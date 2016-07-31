@@ -1,0 +1,14 @@
+subprojects {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    group = 'com.cuga.demo'
+}
+
+
+// gradle 'wrapper' includes binaries to build so that once initiated, other developers don't have to locally install gradle
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.14.1'
+}

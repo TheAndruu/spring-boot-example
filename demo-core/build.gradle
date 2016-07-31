@@ -1,0 +1,30 @@
+
+// Since this is a pure 'library' project, there is no Spring dependencies or anything here,
+// making it a much easier to share (no danger of autoconfigured components instantiating themselves, version conflicts, etc)
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'jacoco'
+
+dependencies {
+    // Best resource to find libraries and versions: https://mvnrepository.com
+
+    // Logging framework
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
+
+    // Unit testing
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // Mocking ability
+    testCompile 'org.mockito:mockito-all:1.10.19'
+}
+
+// Tell the Eclipse IDE to download the source code along with the binaries
+eclipse {
+   classpath {
+      downloadSources=true
+   }
+}
+
+// For code coverage.
+jacoco {
+    toolVersion = "0.7.6.201602180812"
+}

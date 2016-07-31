@@ -1,0 +1,5 @@
+// To declare projects as part of a multi-project build use the 'include' method
+
+include "demo-core"
+include "demo-webapp"
+include "demo-cli"
