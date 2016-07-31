@@ -71,12 +71,12 @@ Examples of how to configure multi-module projects all tracked under a consisten
 # Invoking the REST services
 * Strongly recommend using Postman for manually verifying the REST services
 
-## save() method via curl:
+## save() method via curl
 
     curl -X POST -H "Content-Type: application/json" -d '{ "name":"andrew", "age":32 }' "http://localhost:8080/person/save"
     {"value":true}
 
-## find() method via curl: 
+## find() method via curl
     curl -X GET "http://localhost:8080/person/find/andrew"
     [{"id":"579d60c0b428cd1d3b8832cd","name":"andrew","age":32}]10:40:15 ~/Code/workspace/spring-boot-example $ 
 
