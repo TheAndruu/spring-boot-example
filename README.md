@@ -55,11 +55,17 @@ Examples of how to configure multi-module projects all tracked under a consisten
 * Open the command line client with the command: `mongo`
     
     MongoDB shell version: 3.2.8
+    
     connecting to: test
+    
     > use test
+    
     switched to db test
+    
     > show collections
+    
     Person
+    
     > db.Person.find().pretty()
     {
         "_id" : ObjectId("579d60c0b428cd1d3b8832cd"),
