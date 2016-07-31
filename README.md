@@ -14,9 +14,10 @@ Examples of how to configure multi-module projects all tracked under a consisten
 * Install Eclipse plugin for Spring (Spring IDE plugin, installed by opening Eclipse, Window menu > Eclipse Marketplace, searching for Spring > Install)
 * Also install the 'buildship' gradle plugin (if it wasn't installed along with the Spring plugin... it might be included by default)
 
-## Checking out the code
-* Import the project from Git inside Eclipse
-* On the last screen of the import dialog, choose "Import as a general project"
+## Checking out the code inside Eclipse
+* `Import > Projects from Git`
+* `Clone URI > https://github.com/TheAndruu/spring-boot-example.git`
+* Important: Ensure the 3rd option is checked on the final screen to `Import as General Project`
 * After the code has been checked out, right-click 'spring-boot-example' in the workspace and choose `Gradle > Add Gradle Nature`
 
 # Running the applications
