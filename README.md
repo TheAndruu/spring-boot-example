@@ -40,7 +40,6 @@ Examples of how to configure multi-module projects all tracked under a consisten
 * Execute: `./gradlew :demo-cli:bootRepackage`
 * Then execute: `java -jar demo-cli/build/libs/demo-cli-1.0.0-SNAPSHOT.jar time`
  
-
 # Tests
 ## Running all tests on the command line
 ` ./gradlew test`
